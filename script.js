@@ -18,3 +18,14 @@ function type() {
 // Memulai animasi
 typingElement.classList.add('typing-animation'); // Menambah kelas animasi
 type();
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const overlay = document.getElementById('overlay');
+    const closePopupButton = document.getElementById('closePopup');
+
+    closePopupButton.addEventListener('click', function () {
+        overlay.style.display = 'none';
+    });
+});
+
