@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kembang Api dengan Canvas</title>
+    <title>Happy Eid Mubarak For you :*</title>
     <style>
         body, html {
             margin: 0;
@@ -32,8 +32,6 @@
         .con-mess {
             background-color: rgba(0, 255, 255, 0.267);
         }
-
-        
         #typing {
             font-family: 'Courier New', Courier, monospace;
             font-size: 24px;
@@ -42,30 +40,38 @@
             border-right: .15em solid orange; /* Cursor berkedip */
             width: 0;
             animation: typing 3.5s steps(40, end);
-            
         }
 
+        /* Tambahkan media queries untuk responsif di perangkat mobile */
+        @media only screen and (max-width: 600px) {
+            #message {
+                top: 50px; /* Atur posisi teks untuk perangkat mobile */
+                max-width: 90%; /* Sesuaikan lebar maksimal teks untuk perangkat mobile */
+                font-size: 16px; /* Sesuaikan ukuran font untuk perangkat mobile */
+            }
+        }
 
-
+        /* Tambahkan media queries untuk responsif di perangkat tablet */
+        @media only screen and (max-width: 900px) {
+            #message {
+                max-width: 70%; /* Sesuaikan lebar maksimal teks untuk perangkat tablet */
+            }
+        }
     </style>
 </head>
 <body>
-
     <canvas id="fireworkCanvas"></canvas>
-    
-    <div  id="message">
+    <div id="message" class="con-mess">
         <h2><div id="typing"></div></h2>
-            <p>Kepada cahaya hatiku</p>
-            <p>Di momen yang berkah ini, saat kita merayakan Eid Mubarak, aku ingin mengungkapkan rasa syukurku karena memiliki kamu di hidupku. Semoga hari ini membawa kebahagiaan, kedamaian, dan cinta yang berkelimpahan ke dalam kehidupan kita. Aku berdoa agar kita selalu bersama dalam suka dan duka, berbagi senyum dan tawa, serta terus tumbuh dalam cinta dan iman.</p>
-            <p>Semoga setiap doa yang terucap membawa kita lebih dekat kepada kebaikan, dan setiap langkah kita dipandu menuju kebahagiaan yang abadi. Aku mencintaimu lebih dari kemarin dan kurang dari esok. Selamat Eid Mubarak, sayang. Semoga cinta kita terus bersemi di bawah berkah-Nya.</p>
-            <p>Dengan seluruh cinta di hatiku,<br>Syn Naulaid</p>
-        
+        <p>Kepada cahaya hatiku</p>
+        <p>Di momen yang berkah ini, saat kita merayakan Eid Mubarak, aku ingin mengungkapkan rasa syukurku karena memiliki kamu di hidupku. Semoga hari ini membawa kebahagiaan, kedamaian, dan cinta yang berkelimpahan ke dalam kehidupan kita. Aku berdoa agar kita selalu bersama dalam suka dan duka, berbagi senyum dan tawa, serta terus tumbuh dalam cinta dan iman.</p>
+        <p>Semoga setiap doa yang terucap membawa kita lebih dekat kepada kebaikan, dan setiap langkah kita dipandu menuju kebahagiaan yang abadi. Aku mencintaimu lebih dari kemarin dan kurang dari esok. Selamat Eid Mubarak, sayang. Semoga cinta kita terus bersemi di bawah berkah-Nya.</p>
+        <p>Dengan seluruh cinta di hatiku,<br>Syn Naulaid</p>
         <audio id="bgMusic" autoplay loop>
             <source src="https://h.top4top.io/m_30157agir1.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
-    
     <script src="firework.js"></script>
     <script src="script.js"></script>
 </body>
