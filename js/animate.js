@@ -1,7 +1,7 @@
 function animate(typewriter) {
     sequence = [
         {
-            text: "root@nanda:~# ",
+            text: "root@Syn:~# ",
             instant: true,
             delayAfter: 350
         },
@@ -10,57 +10,57 @@ function animate(typewriter) {
             delayAfter: 350
         },
         {
-            text: "root@nanda:~# ",
+            text: "root@Syn:~# ",
             instant: true,
             delayAfter: 350
         },
         {
-            text: "Selamat Hari Raya Idul Fitri 1443 Hijriah, saudaraku.\n",
+            text: "Selamat Hari Raya Idul Fitri Ayang sama keluarga.\n",
             delayAfter: 350
         },
         {
-            text: "root@nanda:~# ",
+            text: "root@Syn:~# ",
             instant: true,
             delayAfter: 350
         },
         {
-            text: "Saya Nanda, di hari yang suci dan penuh berkah ini, apabila saya pernah berbuat salah baik dari perilaku maupun lisan\n",
+            text: "Maafin aku ya ayang :* suka bikin kamu kesel wae :(\n",
             delayAfter: 350
         },
         {
-            text: "root@nanda:~# ",
+            text: "root@Syn:~# ",
             instant: true,
             delayAfter: 350
         },
         {
-            text: "maka ingatlah bahwa itu semua... MEMANGLAH SAYA SENGAJA\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\badalah benar-benar kekhilafan saya.\n",
+            text: "Maafin juga cuman bisa ngasih kamu giniian, gak kayak cowok lain :(.\n",
             delayAfter: 350
         },
         {
-            text: "root@nanda:~# ",
+            text: "root@Syn:~# ",
             instant: true,
             delayAfter: 350
         },
         {
-            text: "Oleh karena itu, saya atas nama pribadi ingin meminta maaf sebesar-besarnya atas segala kekhilafan saya.\n",
+            text: "Salamin juga sama ayah kamu ibu kamu, bilangin anak nya jangan di kemana manain insyallah kalo dah siap otw ngajakin ke pelaminan :v.\n",
             delayAfter: 350
         },
         {
-            text: "root@nanda:~# ",
+            text: "root@Syn:~# ",
             instant: true,
             delayAfter: 350
         },
         {
-            text: "Minal Aidzin Wal Faidzin.\n",
+            text: "Minal Aidzin Wal Faidzin Pokonamah mwuaaaahhhhhh :*.\n",
             delayAfter: 350
         },
         {
-            text: "root@nanda:~# ",
+            text: "root@Syn:~# ",
             instant: true,
             delayAfter: 350
         },
         {
-            text: "Wassalamu'alaikum Warrahmatullahi Wabarakatuh.\n",
+            text: "Sakitu ti pusat mah Wassalamu'alaikum Warrahmatullahi Wabarakatuh.\n",
             delayAfter: 350
         },
     ];
