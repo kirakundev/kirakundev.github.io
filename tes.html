@@ -1,78 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kembang Api dengan Canvas</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: black;
-        }
-        canvas {
-            display: block;
-        }
-        #message {
-            position: absolute;
-            top: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgb(29, 153, 4);
-            text-align: justify;
-            max-width: 300px; /* Sesuaikan lebar maksimal teks */
-            font-family: 'Arial', sans-serif;
-            font-size: 18px; /* Sesuaikan ukuran font */
-            z-index: 2; /* Pastikan teks muncul di atas canvas */
-            background-color: rgba(4, 255, 222, 0.171); /* Sedikit latar belakang transparan untuk meningkatkan legibilitas */
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .con-mess {
-            background-color: rgba(0, 255, 255, 0.267);
-        }
-        #typing {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 24px;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: .15em solid orange; /* Cursor berkedip */
-            width: 0;
-            animation: typing 3.5s steps(40, end);
-        }
+<html lang="id-ID">
+	
+	<head>
+        <title>Minal Aidzin Wal Faidzin</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Selamat Hari Raya Idul Fitri 1443 H. Minal aidzin wal faidzin.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="@sonadztux">
 
-        /* Tambahkan media queries untuk responsif di perangkat mobile */
-        @media only screen and (max-width: 600px) {
-            #message {
-                top: 50px; /* Atur posisi teks untuk perangkat mobile */
-                max-width: 90%; /* Sesuaikan lebar maksimal teks untuk perangkat mobile */
-                font-size: 16px; /* Sesuaikan ukuran font untuk perangkat mobile */
-            }
-        }
+        <link rel="icon" href="img/ketupat.gif" type="image/gif">
+        
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        /* Tambahkan media queries untuk responsif di perangkat tablet */
-        @media only screen and (max-width: 900px) {
-            #message {
-                max-width: 70%; /* Sesuaikan lebar maksimal teks untuk perangkat tablet */
-            }
-        }
-    </style>
-</head>
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+
+        <!-- ============ Title Text Animation ============  -->
+        <script type="text/javascript">
+        	function tb8_makeArray(n){
+        		this.length = n;
+        		return this.length;
+        	}
+
+        	tb8_messages = new
+        	tb8_makeArray(3);
+        	tb8_messages[0] = "Selamat Hari Raya Idul Fitri 1443 H"
+        	tb8_messages[1] = "Minal Aidzin Wal Faidzin"
+        	tb8_messages[2] = "Mohon Maaf Lahir dan Batin"
+        	tb8_rptType = 'infinite'
+        	tb8_rptNbr = 5;
+        	tb8_speed = 250;
+        	tb8_delay = 400;
+
+        	var tb8_counter = 1;
+        	var tb8_currMsg = 0;
+        	var tb8_tekst = "";
+        	var tb8_i = 0;
+        	var tb8_TID = null;
+
+        	function tb8_pisi(){
+        		tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1);
+        		document.title = tb8_tekst; tb8_sp=tb8_speed;
+        		tb8_i++
+        		if (tb8_i == tb8_messages[tb8_currMsg].length) { 
+        			tb8_currMsg++;
+        			tb8_i = 0;
+        			tb8_tekst = "";
+        			tb8_sp = tb8_delay;
+        		}
+        		if (tb8_currMsg == tb8_messages.length) {
+        			if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr)) {
+        				clearTimeout(tb8_TID);
+        				return;
+        			}
+        			tb8_counter++;
+        			tb8_currMsg = 0;
+        		}
+        		tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+        	}
+        	tb8_pisi()
+        </script>
+        <!-- ============ End Title Text Animation ============  -->
+
+        <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typewriter.js"></script>
+        <script src="js/animate.js"></script>
+		<style>
+			body, html {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden; /* Mencegah scroll */
+			}
+			#fireworkCanvas {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1; /* Memastikan canvas berada di belakang konten lain */
+			}
+			.board {
+				position: relative;
+				z-index: 1; /* Memastikan teks berada di atas canvas */
+				color: white; /* Ganti sesuai kebutuhan */
+				text-align: center; /* Contoh styling */
+			}
+		</style>
+		
+
+	</head>
 <body>
     <canvas id="fireworkCanvas"></canvas>
-    <div id="message" class="con-mess">
-        <h2><div id="typing"></div></h2>
-        <p>Kepada cahaya hatiku</p>
-        <p>Di momen yang berkah ini, saat kita merayakan Eid Mubarak, aku ingin mengungkapkan rasa syukurku karena memiliki kamu di hidupku. Semoga hari ini membawa kebahagiaan, kedamaian, dan cinta yang berkelimpahan ke dalam kehidupan kita. Aku berdoa agar kita selalu bersama dalam suka dan duka, berbagi senyum dan tawa, serta terus tumbuh dalam cinta dan iman.</p>
-        <p>Semoga setiap doa yang terucap membawa kita lebih dekat kepada kebaikan, dan setiap langkah kita dipandu menuju kebahagiaan yang abadi. Aku mencintaimu lebih dari kemarin dan kurang dari esok. Selamat Eid Mubarak, sayang. Semoga cinta kita terus bersemi di bawah berkah-Nya.</p>
-        <p>Dengan seluruh cinta di hatiku,<br>Syn Naulaid</p>
-        <audio id="bgMusic" autoplay loop>
-            <source src="https://h.top4top.io/m_30157agir1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+	<div class="board">
+	   <p id="terminal"></p>
+	</div> 
+
+	<!-- ============ JS Function Automate Typing in Terminal ============  -->
+	<!-- source code from: https://github.com/mehaase/js-typewriter -->
+	<script>
+		$(function () {
+		    var typewriter = new Typewriter($("#terminal"));
+		    typewriter.setCaret("_");
+		    typewriter.setCaretPeriod(500);
+		    typewriter.setDelay(150, 50);
+		    animate(typewriter);
+		});
+	</script>
+	<!-- ============ End Function ============  -->
     <script src="firework.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
