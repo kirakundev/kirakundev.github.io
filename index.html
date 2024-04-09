@@ -1,147 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Eid Mubarak Ayang</title>
-    <style>
-        html,
-body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
+<html lang="id-ID">
+	
+	<head>
+        <title>Minal Aidzin Wal Faidzin</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Selamat Hari Raya Idul Fitri 1443 H. Minal aidzin wal faidzin.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="@sonadztux">
 
-html {
-	font-size: 16px;
-}
+        <link rel="icon" href="img/ketupat.gif" type="image/gif">
+        
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
-body {
-	background-image: url('../img/masjid-1.jpg');
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-color: #464646;
-	font-family: 'Inconsolata';
-	display: flex;
-	justify-content: center;
-  align-items: center;
-}
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
 
-.board {
-	background-color: #00000089;
-	color: #ffffff;
-	padding: 20px;
-  width: 60%;
-  margin: 1rem;
-}
+        <!-- ============ Title Text Animation ============  -->
+        <script type="text/javascript">
+        	function tb8_makeArray(n){
+        		this.length = n;
+        		return this.length;
+        	}
 
-@media only screen and (max-width: 60em) { /* 60em = 960px (60 x 16px)*/
-	.board {
-		width: 98%;
-	}
-}
-#terminal {
-	white-space: pre-wrap;
-}
+        	tb8_messages = new
+        	tb8_makeArray(3);
+        	tb8_messages[0] = "Selamat Hari Raya Idul Fitri 1443 H"
+        	tb8_messages[1] = "Minal Aidzin Wal Faidzin"
+        	tb8_messages[2] = "Mohon Maaf Lahir dan Batin"
+        	tb8_rptType = 'infinite'
+        	tb8_rptNbr = 5;
+        	tb8_speed = 250;
+        	tb8_delay = 400;
 
-#b {
-	display: none;
-}
+        	var tb8_counter = 1;
+        	var tb8_currMsg = 0;
+        	var tb8_tekst = "";
+        	var tb8_i = 0;
+        	var tb8_TID = null;
 
+        	function tb8_pisi(){
+        		tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1);
+        		document.title = tb8_tekst; tb8_sp=tb8_speed;
+        		tb8_i++
+        		if (tb8_i == tb8_messages[tb8_currMsg].length) { 
+        			tb8_currMsg++;
+        			tb8_i = 0;
+        			tb8_tekst = "";
+        			tb8_sp = tb8_delay;
+        		}
+        		if (tb8_currMsg == tb8_messages.length) {
+        			if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr)) {
+        				clearTimeout(tb8_TID);
+        				return;
+        			}
+        			tb8_counter++;
+        			tb8_currMsg = 0;
+        		}
+        		tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+        	}
+        	tb8_pisi()
+        </script>
+        <!-- ============ End Title Text Animation ============  -->
 
-    </style>
-    <!-- ============ Title Text Animation ============  -->
-    <script type="text/javascript">
-        function tb8_makeArray(n){
-            this.length = n;
-            return this.length;
-        }
+        <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typewriter.js"></script>
+        <script src="js/animate.js"></script>
 
-        tb8_messages = new
-        tb8_makeArray(3);
-        tb8_messages[0] = "Selamat Hari Raya Idul Fitri 1443 H"
-        tb8_messages[1] = "Minal Aidzin Wal Faidzin"
-        tb8_messages[2] = "Mohon Maaf Lahir dan Batin"
-        tb8_rptType = 'infinite'
-        tb8_rptNbr = 5;
-        tb8_speed = 250;
-        tb8_delay = 400;
-
-        var tb8_counter = 1;
-        var tb8_currMsg = 0;
-        var tb8_tekst = "";
-        var tb8_i = 0;
-        var tb8_TID = null;
-
-        function tb8_pisi(){
-            tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1);
-            document.title = tb8_tekst; tb8_sp=tb8_speed;
-            tb8_i++
-            if (tb8_i == tb8_messages[tb8_currMsg].length) { 
-                tb8_currMsg++;
-                tb8_i = 0;
-                tb8_tekst = "";
-                tb8_sp = tb8_delay;
-            }
-            if (tb8_currMsg == tb8_messages.length) {
-                if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr)) {
-                    clearTimeout(tb8_TID);
-                    return;
-                }
-                tb8_counter++;
-                tb8_currMsg = 0;
-            }
-            tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
-        }
-        tb8_pisi()
-    </script>
-    <!-- ============ End Title Text Animation ============  -->
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/typewriter.js"></script>
-    <script src="js/animate.js"></script>
-    
-</head>
+	</head>
 <body>
+	
+	<div class="board">
+	   <p id="terminal"></p>
+	</div> 
 
-    <canvas id="fireworkCanvas"></canvas>
-    
-    <div class="board">
-        <p id="terminal"></p>
-     </div> 
- 
-     <!-- ============ JS Function Automate Typing in Terminal ============  -->
-     <!-- source code from: https://github.com/mehaase/js-typewriter -->
-     <script>
-         $(function () {
-             var typewriter = new Typewriter($("#terminal"));
-             typewriter.setCaret("_");
-             typewriter.setCaretPeriod(500);
-             typewriter.setDelay(150, 50);
-             animate(typewriter);
-         });
-     </script>
-    <div  id="message">
-        
-            
-        
-        <audio id="bgMusic" autoplay loop>
-            <source src="https://h.top4top.io/m_30157agir1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    
-    <script src="firework.js"></script>
-    <script src="script.js"></script>
-    <script>
-        
-        alert('Hallo ayang :*');
-        alert('Maafin aku ya sering bikin kamu marah :(');
-        alert('Sama maafin juga aku gak bisa ngasih apa apa :(, cuman bisa ngasih ginian :(')
-
-      </script>
-        
+	<!-- ============ JS Function Automate Typing in Terminal ============  -->
+	<!-- source code from: https://github.com/mehaase/js-typewriter -->
+	<script>
+		$(function () {
+		    var typewriter = new Typewriter($("#terminal"));
+		    typewriter.setCaret("_");
+		    typewriter.setCaretPeriod(500);
+		    typewriter.setDelay(150, 50);
+		    animate(typewriter);
+		});
+	</script>
+	<!-- ============ End Function ============  -->
 </body>
 </html>
